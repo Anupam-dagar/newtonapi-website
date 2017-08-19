@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Newton's calculator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<h1>Newton's Calculator</h1>
+						</header>
+						<hr />
+							<div class="field">
+								<input type="text" name="name" id="expression" placeholder="Enter Expression" />
+							</div><br>
+							<h2 id="operation" style="display: none;"></h2>
+							<hr />
+							<h1 id="answer" style="display: none;"></h1>
+							<ul class="actions">
+								<li class="button" id="simplify">Simplify</li>
+								<li class="button" id="factor">Factor</li>
+								<li class="button" id="derive">Derive</li>
+							</ul>
+							<ul class="actions">
+								<li class="button" id="integrate">Integrate</li>
+								<li class="button" id="zeroes">Find 0's</li>
+								<li class="button" id="ftangent">Find Tangent</li>
+							</ul>
+							<ul class="actions">
+								<li class="button" id="area">Area Under Curve</li>
+								<li class="button" id="cos">Cosine</li>
+								<li class="button" id="sin">Sine</li>
+							</ul>
+							<ul class="actions">
+								<li class="button" id="tangent">Tangent</li>
+								<li class="button" id="cosin">Inverse Cosine</li>
+								<li class="button" id="sinin">Inverse Sine</li>
+							</ul>
+							<ul class="actions">
+								<li class="button" id="tanin">Inverse Tangent</li>
+								<li class="button" id="abs">Absolute Value</li>
+								<li class="button" id="log">Logarithm</li>
+							</ul>
+							<ul class="actions">
+								<li></li>
+								<li class="button" id="btn">Calculate</li>
+								<li></li>
+							</ul>
+						<hr />
+						<footer>
+							<ul class="icons">
+								<li><a href="https://www.github.com/Anupam-dagar" class="fa-github">Github</a></li>
+								<li><a href="https://www.facebook.com/invincible.anupam" class="fa-facebook">Facebook</a></li>
+								<li><a href="https://www.linkedin.com/in/anupam-dagar-356b39129/" class="fa-linkedin">Linkedin</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>Developed by: Anupam Dagar</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script type="text/javascript" src="assets/js/apicall.js"></script>
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#btn").click(function(){
+						$('ul').fadeOut();
+						$('#answer').delay(400).fadeIn();
+					});
+				});
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$(".button").click(function(){
+						$('#operation').fadeIn();
+					});
+				});
+			</script>
+	</body>
+</html>
